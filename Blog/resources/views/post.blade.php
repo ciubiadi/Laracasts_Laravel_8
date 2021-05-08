@@ -16,10 +16,10 @@
     <body class="antialiased">
 
         <article>
-            <h1><?= $post->title; ?></h1>
+            <h1>{{ $post->title }}</h1>
 
             <div>
-                <?= $post->body; ?> </div>
+               {!! $post->body !!}
             </div>
         </article>
 
