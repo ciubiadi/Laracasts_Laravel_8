@@ -16,8 +16,11 @@
     <body class="antialiased">
 
         <article>
-            <h1><a href="/post">My First Post</a></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quo unde in exercitationem voluptatum impedit et veritatis sapiente temporibus! Placeat autem dolores minima corrupti beatae itaque dolore iste velit dolorum.</p>
+            <h1><?= $post->title; ?></h1>
+
+            <div>
+                <?= $post->body; ?> </div>
+            </div>
         </article>
 
         <a href="/">Go back</a>
