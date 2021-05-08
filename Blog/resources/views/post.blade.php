@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Ciubi's Blog</title>
+@section('content')
+    <article>
+        <h1>{{ $post->title }}</h1>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <div>
+            {!! $post->body !!}
+        </div>
+    </article>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./css/app.css" />
-        <script src="./js/app.js"></script>
-    </head>
-    <body class="antialiased">
-
-        <article>
-            <h1>{{ $post->title }}</h1>
-
-            <div>
-               {!! $post->body !!}
-            </div>
-        </article>
-
-        <a href="/">Go back</a>
-    </body>
-</html>
+    <a href="/">Go back</a>
+@endsection
